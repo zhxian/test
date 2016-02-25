@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<!--property 属性name：配置连接参数的key，尽可能不要手动书写，拷贝过来 ，标签里面的内容，配置的value  -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/userdb</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+	</default-config> <!-- This app is massive! -->
+	<named-config name="itcast">
+		<!-- c3p0运行连接多个数据库。开发环境，测试环境，线上环境，预发布环境 -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/day06</property>
+		<property name="user">root</property>
+		<property name="password">123456</property>
+	</named-config>
+</c3p0-config>
